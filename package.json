@@ -1,0 +1,61 @@
+{
+  "name": "XXX",
+  "homepage": "https://github.com/qaraluch/XXX",
+  "version": "0.1.0",
+  "description": "YYY",
+  "license": "MIT",
+  "author": {
+    "name": "qaraluch",
+    "email": "prezenciq@gmail.com",
+    "url": "https://github.com/qaraluch"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/qaraluch/XXX.git"
+  },
+  "files": ["dist/", "src/"],
+  "main": "./dist/index.js",
+  "module": "./src/index.js",
+  "scripts": {
+    "build": "babel src --out-dir=dist",
+    "test": "ava --verbose",
+    "start": "npm run build && node dist/index.js",
+    "start:raw": "node src/index.js",
+    "start:test": "npm run build -s && npm run test -s $1",
+    "prepublishOnly": "npm run build",
+    "watch": "nodemon --watch src --watch test -x \"npm run start:test -s\"",
+    "clear": "rimraf dist/*",
+    "clear:all": "rimraf node_modules"
+  },
+  "babel": {
+    "presets": [
+      [
+        "env",
+        {
+          "targets": {
+            "node": "current"
+          }
+        }
+      ]
+    ],
+    "plugins": ["transform-runtime"]
+  },
+  "ava": {
+    "require": ["babel-register"],
+    "babel": "inherit"
+  },
+  "devDependencies": {
+    "babel-cli": "0.0.1",
+    "ava": "0.0.1",
+    "babel-register": "0.0.1",
+    "babel-preset-env": "0.0.1",
+    "babel-plugin-transform-runtime": "0.0.1",
+    "eslint": "0.0.1",
+    "eslint-plugin-import": "0.0.1",
+    "babel-eslint": "0.0.1",
+    "prettier": "0.0.1"
+  },
+  "dependencies": {
+    "babel-runtime": "0.0.1"
+  }
+}
