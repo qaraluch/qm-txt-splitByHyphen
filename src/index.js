@@ -35,12 +35,14 @@ export default function splitByHyphen(str, titleSplitAt = 0) {
 
   positionsH = filterForTitleSplit(positionsH, titleSplitAt);
 
+  const breakingChar = "<%break@>"; // not neat :(
+
   const chunks = str
     .split("")
-    .map((char, idx) => (positionsH.includes(idx) ? "|" : char))
+    .map((char, idx) => (positionsH.includes(idx) ? breakingChar : char))
     .join("")
-    .split("|");
-  // remove empty strings
+    .split(breakingChar);
+
   const cleanChunks = chunks.filter(chunk => chunk).map(chunk => chunk.trim());
 
   return positionsH.length === 0 ? undefined : cleanChunks;
