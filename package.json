@@ -1,8 +1,8 @@
 {
-  "name": "XXX",
-  "homepage": "https://github.com/qaraluch/XXX",
+  "name": "qm-txt-splitbyhyphen",
+  "homepage": "https://github.com/qaraluch/qm-txt-splitByHyphen",
   "version": "0.1.0",
-  "description": "YYY",
+  "description": "tiny module for spliting string by its hyphen (and hyphen like chars)",
   "license": "MIT",
   "author": {
     "name": "qaraluch",
@@ -11,9 +11,12 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/qaraluch/XXX.git"
+    "url": "https://github.com/qaraluch/qm-txt-splitByHyphen.git"
   },
-  "files": ["dist/", "src/"],
+  "files": [
+    "dist/",
+    "src/"
+  ],
   "main": "./dist/index.js",
   "module": "./src/index.js",
   "scripts": {
@@ -38,24 +41,28 @@
         }
       ]
     ],
-    "plugins": ["transform-runtime"]
+    "plugins": [
+      "transform-runtime"
+    ]
   },
   "ava": {
-    "require": ["babel-register"],
+    "require": [
+      "babel-register"
+    ],
     "babel": "inherit"
   },
   "devDependencies": {
-    "babel-cli": "0.0.1",
-    "ava": "0.0.1",
-    "babel-register": "0.0.1",
-    "babel-preset-env": "0.0.1",
-    "babel-plugin-transform-runtime": "0.0.1",
-    "eslint": "0.0.1",
-    "eslint-plugin-import": "0.0.1",
-    "babel-eslint": "0.0.1",
-    "prettier": "0.0.1"
+    "babel-cli": "6.26.0",
+    "ava": "0.24.0",
+    "babel-register": "6.26.0",
+    "babel-preset-env": "1.6.1",
+    "babel-plugin-transform-runtime": "6.23.0",
+    "eslint": "4.16.0",
+    "eslint-plugin-import": "2.8.0",
+    "babel-eslint": "8.2.1",
+    "prettier": "1.10.2"
   },
   "dependencies": {
-    "babel-runtime": "0.0.1"
+    "babel-runtime": "6.26.0"
   }
 }
