@@ -13,7 +13,7 @@ const hyphenTypes = [
   "\uFF0D" // U+FF0D	FULLWIDTH HYPHEN-MINUS	(－)
 ];
 
-export default function splitByHyphen(str, titleSplitAt = 0) {
+function splitByHyphen(str, titleSplitAt = 0) {
   const ifCharIsH = ch =>
     hyphenTypes
       .map(h => ch === h)
@@ -47,3 +47,5 @@ export default function splitByHyphen(str, titleSplitAt = 0) {
 
   return positionsH.length === 0 ? undefined : cleanChunks;
 }
+
+module.exports = splitByHyphen;
