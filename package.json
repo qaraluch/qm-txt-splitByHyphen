@@ -2,7 +2,9 @@
   "name": "qm-txt-splitbyhyphen",
   "homepage": "https://github.com/qaraluch/qm-txt-splitByHyphen",
   "version": "0.1.0",
-  "description": "tiny module for spliting string by its hyphen (and hyphen like chars)",
+  "description":
+    "tiny module for splitting string by its hyphen (and hyphen like chars)",
+  "keywords": ["string", "split", "hyphen", "dash"],
   "license": "MIT",
   "author": {
     "name": "qaraluch",
@@ -13,10 +15,7 @@
     "type": "git",
     "url": "https://github.com/qaraluch/qm-txt-splitByHyphen.git"
   },
-  "files": [
-    "dist/",
-    "src/"
-  ],
+  "files": ["dist/", "src/"],
   "main": "./dist/index.js",
   "module": "./src/index.js",
   "scripts": {
@@ -41,14 +40,10 @@
         }
       ]
     ],
-    "plugins": [
-      "transform-runtime"
-    ]
+    "plugins": ["transform-runtime"]
   },
   "ava": {
-    "require": [
-      "babel-register"
-    ],
+    "require": ["babel-register"],
     "babel": "inherit"
   },
   "devDependencies": {
