@@ -26,7 +26,7 @@ $ npm i -S qm-txt-splitbyhyphen
 ## Usage
 
 ```js
-import splitByHyphen from "splitbyhyphen";
+const splitByHyphen = require("splitbyhyphen");
 ```
 
 ```js
