@@ -1,7 +1,7 @@
 {
   "name": "qm-txt-splitbyhyphen",
   "homepage": "https://github.com/qaraluch/qm-txt-splitByHyphen",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description":
     "tiny module for splitting string by its hyphen (and hyphen like chars)",
   "keywords": ["string", "split", "hyphen", "dash"],
